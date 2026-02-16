@@ -5,7 +5,7 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.x-informational.svg)](#requirements)
 
-GANdalf6 is a molecular-structure generation and inversion workflow built around bispectrum descriptors, PyTorch GAN training, and geometry reconstruction for MD17-style datasets.
+GANdalf is a molecular-structure generation and inversion workflow built around bispectrum descriptors, PyTorch GAN training, and geometry reconstruction for MD17-style datasets. It aims to use generative modelling to learn the underlying data distribution of a set of molecular conformations, allowing the ability to generate novel conformations for a specified property value, such as total energy.
 
 ## Table of Contents
 
@@ -21,7 +21,6 @@ GANdalf6 is a molecular-structure generation and inversion workflow built around
 - [Reproducibility Notes](#reproducibility-notes)
 - [Troubleshooting](#troubleshooting)
 - [Roadmap](#roadmap)
-- [Contributing](#contributing)
 - [Citation](#citation)
 - [License](#license)
 
@@ -179,7 +178,7 @@ Global config lives in `modules/config.py`:
 - Project base path
 - Molecule naming conventions
 - Element/species mapping
-- Descriptor constants (`RCUTFAC`, `RFAC0`, `TWOJMAX_DICT`)
+- LAMMPS bisprectum components constants (`RCUTFAC`, `RFAC0`, `TWOJMAX_DICT`)
 
 [TODO: Add a short section on which config values are safe to modify]
 
@@ -198,22 +197,34 @@ Global config lives in `modules/config.py`:
 
 ## Roadmap
 
-- [TODO] Add pinned dependency file (`requirements.txt` or `environment.yml`)
 - [TODO] Add automated tests for data and model pipelines
 - [TODO] Add non-interactive mode for all scripts
 - [TODO] Add CI for linting/basic smoke checks
 
-## Contributing
-
-1. Create a feature branch.
-2. Keep changes scoped and reproducible.
-3. Include validation steps (commands + outputs) in your PR description.
-
-[TODO: Add your preferred coding standards/linting workflow]
-
 ## Citation
 
-[TODO: Add publication or thesis citation for this project]
+If you use this repository in your research, please cite:
+
+```bibtex
+@article{PhysRevB.106.035402,
+  title = {Local inversion of the chemical environment representations},
+  author = {Cobelli, Matteo and Cahalane, Paddy and Sanvito, Stefano},
+  journal = {Phys. Rev. B},
+  volume = {106},
+  issue = {3},
+  pages = {035402},
+  numpages = {6},
+  year = {2022},
+  month = {Jul},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevB.106.035402},
+  url = {https://link.aps.org/doi/10.1103/PhysRevB.106.035402}
+}
+```
+
+Related thesis:
+
+- https://www.tara.tcd.ie/items/ad1a1ac4-f83b-498d-8508-a8e264392dd0
 
 ## License
 
