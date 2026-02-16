@@ -1,4 +1,5 @@
 /removed
+**/__pycache__
 /gan/plots/
 /data/bispec/
 /data/xyz/24_azobenzene/test 
